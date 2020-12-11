@@ -92,7 +92,7 @@ public class BMICalculator {
         //4. Click Calculate button
         driver.findElement(By.name("cc")).click();
         String actualCategoryText = driver.findElement(By.name("desc")).getAttribute("value");
-        String expectedCategoryText = "Your category Underweight";
+        String expectedCategoryText = "Your category is Underweight";
         //5. Chek text "Your category is Underweight" is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
         driver.close();
@@ -112,7 +112,7 @@ public class BMICalculator {
         //4. Click Calculate button
         driver.findElement(By.name("cc")).click();
         String actualCategoryText = driver.findElement(By.name("desc")).getAttribute("value");
-        String expectedCategoryText = "Your category Overweight";
+        String expectedCategoryText = "Your category is Overweight";
         //5. Chek text "Your category is Overweight" is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
         driver.close();
