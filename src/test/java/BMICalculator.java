@@ -139,24 +139,6 @@ public class BMICalculator {
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect symbol is displayed! UI shows:  " + actualCategoryText);
         driver.close();
     }
-    @Test
-    //This test should verify the correct entry letter in the Height field on the main page
-    public void calculateKgCmsEnterHeightLetter() {
-        sys();
-        WebDriver driver = new ChromeDriver();
-        //1.Open site https://healthunify.com/bmicalculator/
-        driver.get(address);
-        //2. Enter "47 in Weight field
-        driver.findElement(By.name("wg")).sendKeys("47");
-        //3. Enter "l" in Height field
-        driver.findElement(By.name("ht")).sendKeys("l");
-        //4. Click Calculate button
-        driver.findElement(By.name("cc")).click();
-        String actualCategoryText = driver.findElement(By.name("si")).getAttribute("value");
-        String expectedCategoryText = "NaN";
-        //5. Chek text "NaN" is displayed
-        Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect symbol is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
-    }
+
 
 }
