@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -10,17 +11,17 @@ import java.util.Set;
 
 public class BMICalculator {
     String address = "https://healthunify.com/bmicalculator/";
+    WebDriver driver = new ChromeDriver();
 
-    public void sys() {
+
+    @BeforeMethod
+    public void initMethod() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-
     }
 
     @Test
     //This test should verify Normal category on home page
     public void calculateNormal() {
-        sys();
-        WebDriver driver = new ChromeDriver();
         //1.Open https://healthunify.com/bmicalculator/
         driver.get(address);
         //2.Enter weight 80
@@ -40,8 +41,7 @@ public class BMICalculator {
     @Test
     //This test should verify Obese category on home page.
     public void calculateKgCmsObese() {
-        sys();
-        WebDriver driver = new ChromeDriver();
+
         //1. Open site https://healthunify.com/bmicalculator/
         driver.get(address);
         //2. Enter 80 in Weight field
@@ -60,8 +60,7 @@ public class BMICalculator {
     @Test
     //This test should verify Starvation category on home page.
     public void calculateKgCmsStarvation() {
-        sys();
-        WebDriver driver = new ChromeDriver();
+
         //1. Open site https://healthunify.com/bmicalculator/
         driver.get(address);
         //2. Enter 80 in Weight field
@@ -81,8 +80,8 @@ public class BMICalculator {
     @Test
     //This test should verify Underweight category on home page.
     public void calculateKgCmsUnderweight() {
-        sys();
-        WebDriver driver = new ChromeDriver();
+
+
         //1.Open site https://healthunify.com/bmicalculator/
         driver.get(address);
         //2. Enter 43 in Weight field
@@ -101,8 +100,8 @@ public class BMICalculator {
     @Test
     //This test should verify Overweight category on home page.
     public void calculateKgCmsOverweight() {
-        sys();
-        WebDriver driver = new ChromeDriver();
+
+
         //1.Open site https://healthunify.com/bmicalculator/
         driver.get(address);
         //2. Enter 74 in Weight field
@@ -119,12 +118,10 @@ public class BMICalculator {
     }
 
 
-
     @Test
     //This test should verify the correct entry symbol in the Weight field on the main page
     public void calculateKgCmsEnterWeightLetter() {
-        sys();
-        WebDriver driver = new ChromeDriver();
+
         //1.Open site https://healthunify.com/bmicalculator/
         driver.get(address);
         //2. Enter "l" in Weight field
