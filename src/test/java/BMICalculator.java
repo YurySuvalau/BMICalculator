@@ -34,7 +34,7 @@ public class BMICalculator {
         String textActualResult = driver.findElement(By.name("desc")).getAttribute("value");
         String textExpectedResult = "Your category is Normal";
         Assert.assertEquals(textActualResult, textExpectedResult, "Incorrect category is displayed!" + textActualResult);
-        driver.close();
+        driver.quit();
 
     }
 
@@ -54,7 +54,7 @@ public class BMICalculator {
         String expectedCategoryText = "Your category is Obese";
         //5. Check text 'Your category is Obese' is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -73,7 +73,7 @@ public class BMICalculator {
         String expectedCategoryText = "Your category is Starvation";
         //5. Check text 'Your category is Starvation' is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
+        driver.quit();
 
     }
 
@@ -94,7 +94,7 @@ public class BMICalculator {
         String expectedCategoryText = "Your category is Underweight";
         //5. Chek text "Your category is Underweight" is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -114,7 +114,7 @@ public class BMICalculator {
         String expectedCategoryText = "Your category is Overweight";
         //5. Chek text "Your category is Overweight" is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect category is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
+        driver.quit();
     }
 
 
@@ -134,7 +134,7 @@ public class BMICalculator {
         String expectedCategoryText = "NaN";
         //5. Chek text "NaN" is displayed
         Assert.assertEquals(actualCategoryText, expectedCategoryText, "Incorrect symbol is displayed! UI shows:  " + actualCategoryText);
-        driver.close();
+        driver.quit();
     }
 
 
